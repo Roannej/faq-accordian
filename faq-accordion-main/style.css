@@ -3,6 +3,7 @@
     --lightPink: hsl(275, 100%, 97%);
     --grayPurple: hsl(292, 16%, 49%);
     --darkPurple: hsl(292, 42%, 14%);
+    font-size: 16px;
 }
 /*weights = 400/600/700*/
 
@@ -14,42 +15,107 @@ body {
 body {
     margin: 0;
     padding: 0;
-    max-width: 375px;
+    /*max-width: 375px;*/
+    /*min-height: 512px;*/
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--lightPink);
+    font-family: var(--rootFont);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
 }
 
 #mobile-img {
-
+    width: 100%;
+    max-height: 230px;
 }
 
 #desktop-img {
     display: none;
 }
 
-.heading-logo {
-
-}
-
-.head-image {
-
-}
-
 .faq-container {
-    width: 86.6%;
+    /*width: 86.6%;*/
     background-color: white;
     position: absolute;
-    top: 30.69%; /*RESIZE*/
+    top: 24%; /*RESIZE*/
+    display: flex;
+    flex-direction: column;
+    margin: 6.7%;
+    padding: 6.7% 6.7% 0;
+    border-radius: 10px;
+}
+
+.faq-container .heading-logo {
+    display: flex;
+    align-items: center;
+}
+
+.faq-container .star {
+    width: 5.3%;
+}
+
+.heading-logo span {
+    font-size: 1.75rem;
+    padding-left: 7.5%;
+    margin: 0;
+    font-weight: 700;
+}
+
+.border {
+    border-bottom: 2px solid var(--lightPink);
 }
 
 #question {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--darkPurple);
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 7.5% 0;
 }
 
-#q1 .minus {
+#question span {
+    width: 90%;
+}
+
+#answer {
+    display: none;
+    width: 95%;
+    color: var(--grayPurple);
+    font-size: 0.85rem;
+    /*letter-spacing: 1.2;*/
+    line-height: 150%;
+    font-weight: 400;
+    padding-bottom: 7.5%;
+}
+
+#question .plus {
+    float: inline-end;
+}
+
+#question .minus {
     display: none;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+    font-size: 11px; 
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    position: relative;
+    bottom: -136%;
+    margin: auto;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+    font-weight: bold;
+}
